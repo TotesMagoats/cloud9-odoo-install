@@ -23,7 +23,7 @@ OE_HOME=$GOPATH
 OE_HOME_EXT="$OE_HOME/odoo"
 
 #Enter version for checkout "8.0" for version 8.0, "7.0 (version 7), saas-4, saas-5 (opendays version) and "master" for trunk
-OE_VERSION="8.0"
+OE_VERSION="9.0"
 
 #set the superadmin password
 OE_SUPERADMIN="secret"
@@ -57,6 +57,7 @@ sudo su - postgres -c "psql -U postgres -d postgres -c \"alter user $OE_USER wit
 #--------------------------------------------------
 echo -e "\n---- Install tool packages ----"
 sudo apt-get install wget subversion git bzr bzrtools python-pip -y
+sudo apt-get install node-less
 	
 echo -e "\n---- Install python packages ----"
 sudo apt-get install python-dateutil python-feedparser python-ldap python-libxslt1 python-lxml python-mako python-openid python-psycopg2 python-pybabel python-pychart python-pydot python-pyparsing python-reportlab python-simplejson python-tz python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi python-docutils python-psutil python-mock python-unittest2 python-jinja2 python-pypdf python-decorator python-requests python-passlib python-pil -y
